@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: url("image.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Transparent but visible container */
+.container {
+  width: 370px;
+  padding: 2.5rem;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+  color: #fff;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.container h2 {
+  margin-bottom: 1.8rem;
+  font-size: 1.9rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Floating label inputs */
+.input-box {
+  position: relative;
+  margin: 25px 0;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(200, 200, 255, 0.7);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-box input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px #007bff;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.input-box label {
+  position: absolute;
+  left: 15px;
+  top: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+  top: -12px;
+  left: 10px;
+  font-size: 13px;
+  color: #00a2ff;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: linear-gradient(135deg, #007bff80, #00bfff60);
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #0099ff, #00ccff);
+  box-shadow: 0 0 15px #00bfff;
+}
+
+/* Link */
+.link {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.link a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+  .container {
+    width: 90%;
+    padding: 2rem;
+  }
+}
+
+/* Fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
